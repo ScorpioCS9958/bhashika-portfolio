@@ -105,7 +105,7 @@ To set up on your own Netlify deployment:
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
+This project is licensed under the **MIT License** see [LICENSE](LICENSE) for details.
 
 Feel free to use this as inspiration for your own portfolio, but please don't copy it directly and claim it as your own.
 
