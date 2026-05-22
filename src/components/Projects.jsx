@@ -18,10 +18,47 @@ const projects = [
       'Secure session management & form validation',
     ],
     type: 'Enterprise',
+    status: 'Completed',
+    highlight: true,
+  },
+  {
+    id: 2,
+    title: 'Scorpio POS',
+    description:
+      'A completed POS system with invoice, quotation, product, customer, user, print, and WhatsApp sharing modules. Built for business sales workflows with secure role-based access and professional billing features.',
+    icon: ShoppingCart,
+    color: '#99c915fb',
+    tags: ['React', 'Node.js', 'Express', 'SQLite', 'JavaScript', 'POS'],
+    features: [
+      'Invoice and quotation management',
+      'Product, customer, and user modules',
+      'Print layouts and WhatsApp sharing',
+    ],
+    type: 'POS System',
+    status: 'Completed',
+    // priority: 1,
+    highlight: true,
+  },
+  {
+    id: 3,
+    title: 'AI Job Finder LK',
+    description:
+      'An AI-powered job finder platform focused on Sri Lankan and global job sources. It supports job searching, filtering, CV upload, skill extraction, and salary estimation features.',
+    icon: Bot,
+    color: '#00ccff',
+    tags: ['React', 'Vite', 'FastAPI', 'Python', 'TailwindCSS', 'SQLite'],
+    features: [
+      'AI-based job search and filtering',
+      'CV upload with skill extraction',
+      'Salary estimation and job source listing',
+    ],
+    type: 'AI App',
+    status: 'Ongoing',
+    // priority: 2,
     highlight: true,
   },
 {
-  id: 2,
+  id: 4,
   title: 'Portfolio Responsive Website',
   description:
     'A personal portfolio website showcasing my projects, skills, and experience. Built for performance, responsiveness, and modern design, it highlights my work, technical expertise, and allows visitors to easily connect with me for collaborations or inquiries.',
@@ -34,10 +71,11 @@ const projects = [
     'Fast, modern, and fully deployed online',
   ],
   type: 'Web App',
+    status: 'Completed',
   highlight: false,
 },
   {
-    id: 3,
+    id: 5,
     title: 'Student Management System',
     description:
       'Web-based platform supporting academic and administrative operations. Features student and lecturer dashboards, timetables, exam results, GPA calculator, and secure authentication.',
@@ -52,10 +90,47 @@ const projects = [
       'Responsive UI for all screen sizes',
     ],
     type: 'Web App',
+    status: 'Completed',
     highlight: false,
   },
   {
-    id: 4,
+    id: 6,
+    title: 'ShopMate POS',
+    description:
+      'An offline desktop POS system built for Windows. It includes product management, sales checkout, customer handling, reports, receipts, and local SQLite data storage.',
+    icon: ShoppingCart,
+    color: '#f59e0b',
+    tags: ['C#', '.NET 8', 'WPF', 'SQLite', 'Dapper', 'Desktop App'],
+    features: [
+      'Offline desktop POS checkout',
+      'Inventory, customers, and purchases',
+      'Reports, receipts, and dark/light mode',
+    ],
+    type: 'Desktop App',
+    status: 'Ongoing',
+    // priority: 4,
+    highlight: false,
+  },
+  {
+    id: 7,
+    title: 'AI Personal Study & Career Coach',
+    description:
+      'A full-stack AI learning platform that helps users generate career roadmaps, manage daily study tasks, track progress, and chat with an AI coach for guidance.',
+    icon: GraduationCap,
+    color: '#cf5282',
+    tags: ['React', 'Node.js', 'Express', 'Supabase', 'Chart.js', 'Claude API'],
+    features: [
+      'AI roadmap and daily task generation',
+      'Progress dashboard and skill tracking',
+      'AI coach chat with learning guidance',
+    ],
+    type: 'AI App',
+    status: 'Ongoing',
+    // priority: 3,
+    highlight: false,
+  },
+  {
+    id: 8,
     title: 'College Website',
     description:
       'Fully responsive and informative website for a college, with staff profiles, course listings, academic info, contact forms, and announcements. Features smooth scroll animations.',
@@ -70,10 +145,11 @@ const projects = [
       'Contact form with validation',
     ],
     type: 'Website',
+    status: 'Completed',
     highlight: false,
   },
   {
-    id: 5,
+    id: 9,
     title: 'Google Gemini 2.0 Chat App Clone',
     description:
       'Responsive AI chatbot application built with React.js and Google Gemini API. Features real-time conversational responses and multi-chat history management.',
@@ -88,26 +164,27 @@ const projects = [
       'Responsive modern UI',
     ],
     type: 'AI App',
+    status: 'Completed',
     highlight: false,
   },
-  {
-    id: 6,
-    title: 'ATDigital Web Design UI',
-    description:
-      'Modern, responsive website for ATDigital focused on strong UI/UX principles. Showcases digital marketing services with clean layouts, scroll animations, and brand-consistent design.',
-    icon: Layers,
-    color: '#ec4899',
-    tags: ['HTML5', 'CSS3', 'Bootstrap 5', 'JavaScript', 'Figma', 'AOS Library'],
-    features: [
-      'Home, Services, About & Contact sections',
-      'Brand-consistent color scheme',
-      'Scroll animations with AOS',
-      'Fully responsive across all devices',
-      'Figma-designed UI',
-    ],
-    type: 'UI/UX',
-    highlight: false,
-  },
+  // {
+  //   id: 10,
+  //   title: 'ATDigital Web Design UI',
+  //   description:
+  //     'Modern, responsive website for ATDigital focused on strong UI/UX principles. Showcases digital marketing services with clean layouts, scroll animations, and brand-consistent design.',
+  //   icon: Layers,
+  //   color: '#ec4899',
+  //   tags: ['HTML5', 'CSS3', 'Bootstrap 5', 'JavaScript', 'Figma', 'AOS Library'],
+  //   features: [
+  //     'Home, Services, About & Contact sections',
+  //     'Brand-consistent color scheme',
+  //     'Scroll animations with AOS',
+  //     'Fully responsive across all devices',
+  //     'Figma-designed UI',
+  //   ],
+  //   type: 'UI/UX',
+  //   highlight: false,
+  // },
 ];
 
 export default function Projects() {
@@ -115,7 +192,7 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
   const ref = useRef();
 
-  const filters = ['All', 'Enterprise', 'Web App', 'Website', 'AI App', 'UI/UX'];
+  const filters = ['All', 'Enterprise', 'Web App', 'Website', 'AI App', 'UI/UX' ,'POS System', 'Desktop App'];
 
   const filtered = activeFilter === 'All'
     ? projects
@@ -206,6 +283,16 @@ export default function Projects() {
                     >
                       {project.type}
                     </span>
+
+     <span
+      className={`text-xs font-bold px-3 py-1 rounded-full ${
+        project.status === 'Completed'
+          ? 'bg-[#00ff88] text-black'
+          : 'bg-yellow-500/15 text-yellow-400 border border-yellow-500/20'
+      }`}
+    >
+      {project.status}
+    </span>                   
                   </div>
 
                   <h3 className="text-white font-bold text-xl leading-tight group-hover:text-opacity-90 transition-colors">
