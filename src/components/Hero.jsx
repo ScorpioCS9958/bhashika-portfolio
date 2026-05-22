@@ -138,7 +138,7 @@ export default function Hero() {
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </button>
             <a
-              href="https://drive.google.com/file/d/1BAAEd52QaPplTV4AGLadAgmZcYIOHJf1/view?usp=sharing"
+              href="https://drive.google.com/file/d/1IAj5CHlS4GFIa9tYQI6V8qqQ6CJ7GW1I/view?usp=drive_link"
               download
               className="px-8 py-4 border border-[#00ff88]/30 text-[#00ff88] font-semibold rounded-xl hover:bg-[#00ff88]/10 hover:border-[#00ff88]/60 transition-all duration-300 flex items-center gap-2"
             >
