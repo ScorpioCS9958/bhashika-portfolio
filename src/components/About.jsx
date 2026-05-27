@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { MapPin, GraduationCap, Briefcase, Terminal } from 'lucide-react';
 
 const stats = [
-  { value: '5+', label: 'Projects Built', icon: Terminal },
+  { value: '8+', label: 'Projects Built', icon: Terminal },
   { value: '1+', label: 'Years Experience', icon: Briefcase },
   { value: '10+', label: 'Certifications', icon: GraduationCap },
   { value: '100%', label: 'Dedication', icon: '⚡' },
